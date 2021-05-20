@@ -16,5 +16,12 @@ public class LineComparison {
         // Printing the length of lines
         System.out.println("The length of line 1 is: " +lengthOfLine1);
         System.out.println("The length of line 2 is: " +lengthOfLine2);
+
+        // Comparing the lengths of the lines using 'equals' method
+        if (lengthOfLine1.equals(lengthOfLine2)) {
+            System.out.println("Both the lines are equal");
+        } else {
+            System.out.println("Both the lines are not equal");
+        }
     }
 }
