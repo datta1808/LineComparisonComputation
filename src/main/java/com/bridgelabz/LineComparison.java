@@ -23,5 +23,19 @@ public class LineComparison {
         } else {
             System.out.println("Both the lines are not equal");
         }
+
+        //Comparing the lengths of lines using 'compareTo' metthod
+        int lengthCheck = lengthOfLine1.compareTo(lengthOfLine2);
+        switch (lengthCheck) {
+            case 0:
+                System.out.println("Line 1 is equal to line 2");
+                break;
+            case 1:
+                System.out.println("Line 1 is greater than line 2");
+                break;
+            default:
+                System.out.println("Line 2 is greater than line 1");
+                break;
+        }
     }
 }
