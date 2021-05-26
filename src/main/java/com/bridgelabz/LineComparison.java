@@ -7,6 +7,8 @@ public class LineComparison {
     double x1, x2, y1, y2;
     Double lengthOfLine;
     Double line1, line2;
+
+    // method to enter the values of co-ordinates
     public void values() {
         System.out.println("Enter values of points: x1, x2, y1, y2");
         // user inputs
@@ -19,13 +21,13 @@ public class LineComparison {
     }
 
     // method to calculate length of the line
-    public double lengthCalculation() {
+    public void lengthCalculation() {
         lengthOfLine = Math.sqrt(Math.pow(x2 - x1, 2) + Math.pow(y2 - y1, 2));
-        return lengthOfLine;
     }
 
+
     // method to check equality of lines
-    public void EqualityCheck() {
+    public void equalityCheck() {
         System.out.println("For line 1: ");
         values();
         lengthCalculation();
@@ -39,8 +41,9 @@ public class LineComparison {
         System.out.println("length of line 2 = " + line2);
     }
 
+
     // method to compare the length of lines
-    public void Compare() {
+    public void compareLength() {
         int lengthCheck = line1.compareTo(line2);
         switch (lengthCheck) {
             case 0:
@@ -55,10 +58,11 @@ public class LineComparison {
         }
     }
 
+    // main method
     public static void main(String[] args) {
         //Object creation
         LineComparison lines = new LineComparison();
-            lines.EqualityCheck();
-            lines.Compare();
+            lines.equalityCheck();
+            lines.compareLength();
     }
 }
